@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Microsoft.CodeAnalysis.Scripting.CSharp;
 
 namespace ConsoleScript
 {
@@ -10,6 +6,14 @@ namespace ConsoleScript
     {
         static void Main(string[] args)
         {
+            // デフォルトで`System`名前空間は参照設定されている
+            var code = "Console.WriteLine(\"Hello world!\");";
+            var script = CSharpScript.Create(code);
+            script.Run();
+
+#if DEBUG
+            System.Console.ReadKey();
+#endif
         }
     }
 }
