@@ -10,5 +10,10 @@
         {
             System.Console.WriteLine("Hello! I'm {0} and {1} years old.", this.Name, this.Age);
         }
+
+        public void Plus(int age)
+        {
+            this.Age += age;
+        }
     }
 }
