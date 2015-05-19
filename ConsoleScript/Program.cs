@@ -27,6 +27,11 @@ namespace ConsoleScript
             var script4 = CSharpScript.Create(code4);
             script4.Run(script3state);
 
+            // コードをテキストファイルから読み込んで実行する
+            var code5 = System.IO.File.ReadAllText(@"..\ConsoleScript\code5.txt");
+            var script5 = CSharpScript.Create(code5);
+            script5.Run();
+
 #if DEBUG
             System.Console.ReadKey();
 #endif
