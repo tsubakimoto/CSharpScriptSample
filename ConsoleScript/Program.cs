@@ -1,6 +1,8 @@
 ﻿using Library;
 using Microsoft.CodeAnalysis.Scripting;
 using Microsoft.CodeAnalysis.Scripting.CSharp;
+using System;
+using System.IO;
 using System.Linq;
 
 namespace ConsoleScript
@@ -30,7 +32,7 @@ namespace ConsoleScript
             script4.Run(script3state);
 
             // コードをテキストファイルから読み込んで実行する
-            var code5 = System.IO.File.ReadAllText(@"..\ConsoleScript\code5.txt");
+            var code5 = File.ReadAllText(@"..\ConsoleScript\code5.txt");
             var script5 = CSharpScript.Create(code5);
             script5.Run();
 
@@ -44,8 +46,17 @@ namespace ConsoleScript
                 );
             script6.Run(data);
 
+            // 独自の名前空間を組み込んで列挙体を表示する
+            var code7 = "Console.WriteLine(string.Join(\",\", Enum.GetNames(typeof(Fukuoka))));";
+            var script7 = CSharpScript.Create(code7,
+                new ScriptOptions()
+                    .WithReferences(typeof(int).Assembly, typeof(Fukuoka).Assembly)
+                    .WithNamespaces("System", "Library")
+                );
+            script7.Run();
+
 #if DEBUG
-            System.Console.ReadKey();
+            Console.ReadKey();
 #endif
         }
     }
