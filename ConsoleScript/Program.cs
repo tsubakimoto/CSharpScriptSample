@@ -1,5 +1,7 @@
 ﻿using Library;
+using Microsoft.CodeAnalysis.Scripting;
 using Microsoft.CodeAnalysis.Scripting.CSharp;
+using System.Linq;
 
 namespace ConsoleScript
 {
@@ -31,6 +33,16 @@ namespace ConsoleScript
             var code5 = System.IO.File.ReadAllText(@"..\ConsoleScript\code5.txt");
             var script5 = CSharpScript.Create(code5);
             script5.Run();
+
+            // System.Linq名前空間を組み込んでメソッドを実行する
+            var data = new Data { Numbers = Enumerable.Range(1, 5) };
+            var code6 = "Console.WriteLine(Numbers.Sum())";
+            var script6 = CSharpScript.Create(code6,
+                new ScriptOptions()
+                    .WithReferences(typeof(int).Assembly, typeof(Enumerable).Assembly)
+                    .WithNamespaces("System", "System.Linq")
+                );
+            script6.Run(data);
 
 #if DEBUG
             System.Console.ReadKey();
