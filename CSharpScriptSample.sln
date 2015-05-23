@@ -7,8 +7,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleScript", "ConsoleScr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library", "Library\Library.csproj", "{DCAA4EC8-B948-439D-9D26-C626ED41DE88}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WinFormScript", "WinFormScript\WinFormScript.csproj", "{3132E828-D848-4412-B760-C260BCCC13F3}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,10 +21,6 @@ Global
 		{DCAA4EC8-B948-439D-9D26-C626ED41DE88}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DCAA4EC8-B948-439D-9D26-C626ED41DE88}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DCAA4EC8-B948-439D-9D26-C626ED41DE88}.Release|Any CPU.Build.0 = Release|Any CPU
-		{3132E828-D848-4412-B760-C260BCCC13F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3132E828-D848-4412-B760-C260BCCC13F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3132E828-D848-4412-B760-C260BCCC13F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3132E828-D848-4412-B760-C260BCCC13F3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
