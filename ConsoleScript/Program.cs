@@ -54,6 +54,10 @@ namespace ConsoleScript
             var script5 = CSharpScript.Create(code5);
             script5.Run();
 
+            var code5_2 = File.ReadAllText(@"..\ConsoleScript\code5_2.txt");
+            var script5_2 = CSharpScript.Create(code5_2);
+            script5_2.Run();
+
             #endregion
 
             #region sample6

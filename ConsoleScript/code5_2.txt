@@ -1,0 +1,2 @@
+﻿void Say() { Console.WriteLine("Yo Say!!"); }
+Say();
