@@ -87,6 +87,17 @@ namespace ConsoleScript
 
             #endregion
 
+            #region sample8
+
+            // スクリプト内で非同期処理を実行する
+            Console.WriteLine("script8 start");
+            var code8 = File.ReadAllText(@"..\ConsoleScript\code8.txt");
+            var script8 = CSharpScript.Create(code8);
+            script8.Run();
+            Console.WriteLine("script8 end");
+
+            #endregion
+
 #if DEBUG
             Console.ReadKey();
 #endif

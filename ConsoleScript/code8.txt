@@ -1,0 +1,12 @@
+﻿async void Message()
+{
+    System.Console.WriteLine("Main start");
+    await System.Threading.Tasks.Task.Run(() =>
+    {
+        System.Console.WriteLine("Task start");
+        System.Threading.Thread.Sleep(10000);
+        System.Console.WriteLine("Task end");
+    });
+    System.Console.WriteLine("Main end");
+}
+Message();

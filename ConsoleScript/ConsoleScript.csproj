@@ -89,6 +89,7 @@
   <ItemGroup>
     <Content Include="code5.txt" />
     <Content Include="code5_2.txt" />
+    <Content Include="code8.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
