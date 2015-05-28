@@ -1,4 +1,4 @@
-﻿async void Message()
+﻿async void Execute()
 {
     System.Console.WriteLine("Main start");
     await System.Threading.Tasks.Task.Run(() =>
@@ -9,4 +9,4 @@
     });
     System.Console.WriteLine("Main end");
 }
-Message();
+Execute();
